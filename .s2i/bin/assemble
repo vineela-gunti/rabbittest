@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -eo pipefail
+
+########################################################################
+# INFO: Install everything that's required for Jupyter notebooks here.
+########################################################################
+
+
+# Activate JupyterHub extension for JupyterLab.
+
+
+
+# This S2I assemble script is only used when creating the custom image.
+# For when running the image, or using it as a S2I builder, we use a second
+# set of custom S2I scripts. We now need to move these into the correct
+# location and have the custom image use those by dropping in an image
+# metadata file which overrides the labels of the base image.
+
+
+mv /tmp/src/.s2i /opt/app-root/.s2i
+
+mv /tmp/src/run /opt/app-root/run
+
+
+
+rm -rf /tmp/src
+
+# Fixup permissions on directories and files.
+
