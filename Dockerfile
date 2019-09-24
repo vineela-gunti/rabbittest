@@ -17,7 +17,7 @@ LABEL io.k8s.description="Lightweight open source message broker" \
     io.openshift.expose-services="4369:epmd, 5671:amqp, 5672:amqp, 25672:http" \
 
     io.openshift.tags="rabbitmq"
-
+    io.openshift.s2i.scripts-url="image:///opt/app-root/s2i"
     
 
 ENV GPG_KEY="0A9AF2115F4687BD29803A206B73A36E6026DFCA" \
