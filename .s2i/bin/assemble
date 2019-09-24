@@ -18,7 +18,7 @@ set -eo pipefail
 # metadata file which overrides the labels of the base image.
 
 
-mv /tmp/src/.s2i /opt/app-root/.s2i
+mv /tmp/src/.s2i /opt/app-root/s2i
 
 mv /tmp/src/run /opt/app-root/run
 
