@@ -19,8 +19,8 @@ set -eo pipefail
 
 
 mv /tmp/src/.s2i /opt/app-root/s2i
+mv /tmp/src/docker-entrypoint.sh /opt/app-root/bin
 
-mv /tmp/src/run /opt/app-root/run
 
 
 
