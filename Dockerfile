@@ -108,7 +108,7 @@ USER 1001
 
 ENV PATH=$RABBITMQ_HOME/sbin:$PATH
 
-ENTRYPOINT ["/opt/app-root/run"]
+ENTRYPOINT ["run"]
 
 
 
