@@ -10,4 +10,4 @@ set -eo pipefail
 
 
 
-exec /opt/app-root/run
+exec /opt/app-root/bin/docker-entrypoint.sh
