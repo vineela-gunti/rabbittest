@@ -29,10 +29,24 @@ ENV GPG_KEY="0A9AF2115F4687BD29803A206B73A36E6026DFCA" \
     RABBITMQ_LOGS=- \
 
     RABBITMQ_SASL_LOGS=-
-
+USER root
 COPY . /tmp/src
 
-USER root
+
+RUN rm -rf /tmp/src/.git* && \
+
+    chown -R 1001 /tmp/src && \
+
+    chgrp -R 0 /tmp/src && \
+
+    chmod -R g+w /tmp/src && \
+
+    rm -rf /tmp/scripts && \
+
+    mv /tmp/src/.s2i/bin /tmp/scripts
+
+
+USER 1001
 RUN set -xe && \
 
     curl -LO https://github.com/rabbitmq/erlang-rpm/releases/download/v${ERLANG_VERSION}/erlang-${ERLANG_VERSION}-1.el7.centos.x86_64.rpm && \
