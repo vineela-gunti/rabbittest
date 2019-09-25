@@ -16,7 +16,8 @@ set -eo pipefail
 # set of custom S2I scripts. We now need to move these into the correct
 # location and have the custom image use those by dropping in an image
 # metadata file which overrides the labels of the base image.
-
+mkdir -p /opt/app-root/s2i
+mkdir -p /opt/app-root/bin
 
 mv /tmp/src/.s2i /opt/app-root/s2i
 mv /tmp/src/docker-entrypoint.sh /opt/app-root/bin
