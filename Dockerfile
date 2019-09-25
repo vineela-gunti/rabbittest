@@ -108,7 +108,7 @@ USER 1001
 
 #ENV PATH=$RABBITMQ_HOME/sbin:$PATH
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+#ENTRYPOINT ["docker-entrypoint.sh"]
 
 
 
