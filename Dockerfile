@@ -105,7 +105,7 @@ RUN set -xe && \
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
-USER 1001
+#USER 1001
 
 #ENV PATH=$RABBITMQ_HOME/sbin:$PATH
 
