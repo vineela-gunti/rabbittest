@@ -9,6 +9,5 @@ set -eo pipefail
 # Execute the run script from the customised builder.
 #cd  /opt/app-root/bin/
 #CMD ["./docker-entrypoint.sh "]
-
 chmod +x /opt/app-root/bin/docker-entrypoint.sh
 exec /opt/app-root/bin/docker-entrypoint.sh
