@@ -28,4 +28,4 @@ mv /tmp/src/docker-entrypoint.sh /opt/app-root/bin
 rm -rf /tmp/src
 
 # Fixup permissions on directories and files.
-
+fix-permissions /opt/app-root
